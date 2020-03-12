@@ -1,0 +1,3 @@
+Original test.py 
+--dataroot ./datasets/summer2winter_yosemite --name s2w --model test --no_dropout
+
