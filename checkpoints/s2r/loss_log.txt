@@ -1,0 +1,19 @@
+================ Training Loss (Sun Mar  1 13:22:51 2020) ================
+================ Training Loss (Sun Mar  1 13:23:35 2020) ================
+(epoch: 1, iters: 10, time: 2.981, data: 1.482) D_A: 2.050 G_A: 2.125 cycle_A: 5.513 idt_A: 0.913 D_B: 1.133 G_B: 1.189 cycle_B: 1.841 idt_B: 2.972 
+(epoch: 2, iters: 3, time: 3.036, data: 0.000) D_A: 0.615 G_A: 1.084 cycle_A: 4.975 idt_A: 0.980 D_B: 0.548 G_B: 0.921 cycle_B: 1.832 idt_B: 2.485 
+(epoch: 2, iters: 13, time: 2.690, data: 0.001) D_A: 1.093 G_A: 2.133 cycle_A: 6.749 idt_A: 0.792 D_B: 0.523 G_B: 0.634 cycle_B: 1.656 idt_B: 3.377 
+(epoch: 3, iters: 6, time: 3.212, data: 0.001) D_A: 0.366 G_A: 0.554 cycle_A: 2.493 idt_A: 0.718 D_B: 0.372 G_B: 0.627 cycle_B: 1.509 idt_B: 1.166 
+(epoch: 3, iters: 16, time: 2.760, data: 0.001) D_A: 0.446 G_A: 0.885 cycle_A: 5.778 idt_A: 0.667 D_B: 0.500 G_B: 0.816 cycle_B: 1.291 idt_B: 2.925 
+(epoch: 4, iters: 9, time: 3.006, data: 0.001) D_A: 0.216 G_A: 0.548 cycle_A: 3.202 idt_A: 0.693 D_B: 0.278 G_B: 0.463 cycle_B: 1.432 idt_B: 1.521 
+================ Training Loss (Sun Mar  1 13:59:04 2020) ================
+(epoch: 1, iters: 10, time: 2.930, data: 1.536) D_A: 1.004 G_A: 1.614 cycle_A: 3.603 idt_A: 1.157 D_B: 2.553 G_B: 3.186 cycle_B: 2.528 idt_B: 2.151 
+(epoch: 2, iters: 3, time: 3.022, data: 0.000) D_A: 0.657 G_A: 1.351 cycle_A: 4.362 idt_A: 0.889 D_B: 1.749 G_B: 2.476 cycle_B: 1.771 idt_B: 2.231 
+(epoch: 2, iters: 13, time: 2.808, data: 0.001) D_A: 0.754 G_A: 1.548 cycle_A: 2.788 idt_A: 0.922 D_B: 0.496 G_B: 0.660 cycle_B: 1.756 idt_B: 1.208 
+================ Training Loss (Sun Mar  1 14:01:00 2020) ================
+(epoch: 1, iters: 10, time: 3.064, data: 1.404) D_A: 0.815 G_A: 1.075 cycle_A: 3.061 idt_A: 1.105 D_B: 0.787 G_B: 0.843 cycle_B: 2.245 idt_B: 1.511 
+(epoch: 2, iters: 3, time: 3.162, data: 0.001) D_A: 0.864 G_A: 1.315 cycle_A: 7.428 idt_A: 0.960 D_B: 0.493 G_B: 0.648 cycle_B: 2.033 idt_B: 3.627 
+================ Training Loss (Sun Mar  1 14:23:55 2020) ================
+(epoch: 1, iters: 10, time: 2.925, data: 1.363) D_A: 1.414 G_A: 1.265 cycle_A: 4.612 idt_A: 1.212 D_B: 1.441 G_B: 1.905 cycle_B: 2.569 idt_B: 2.420 
+================ Training Loss (Sun Mar  1 14:25:02 2020) ================
+================ Training Loss (Sun Mar  1 15:36:36 2020) ================

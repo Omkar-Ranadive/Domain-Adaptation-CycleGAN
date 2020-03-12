@@ -96,13 +96,10 @@ if __name__ == '__main__':
     # run_iterative_gan(dataset, model, opt, web_dir, iterations=1)
     #
     #
-    # opt = TestOptions().parse()
-    # dataset, model, opt, web_dir = initialize_model(opt)
-    # run_iterative_gan(dataset, model, opt, web_dir, iterations=opt.iterations)
-	import os
-	abspath = os.path.abspath(__file__)
-	print(abspath)
-	print(os.path.dirname(abspath))
+    opt = TestOptions().parse()
+    dataset, model, opt, web_dir = initialize_model(opt)
+    run_iterative_gan(dataset, model, opt, web_dir, iterations=opt.iterations)
+
 
 
 
