@@ -51,9 +51,17 @@ python iterative_output.py --dataroot ./datasets/summer2winter_yosemite --name=s
 The generated results can be viewed in the `Domain-Adaptation-CycleGAN/results/s2w_iterative/test_latest/images` folder.<br>
 
 ### Training inside Docker Container [optional] 
+**Note: Only works if local machine has high RAM**
 * Download the training data from [here.](https://drive.google.com/file/d/1fd-w_ywnwFg2mZllALTXtoN-EeXBaTr7/view?usp=sharing). Note: This data is a subset of [GTA5](http://efrosgans.eecs.berkeley.edu/cyclegta/gta.zip) dataset and the [Cityscapes](https://www.cityscapes-dataset.com/) dataset. 
 * Extract the zip file on your local computer 
+* To train on the docker, much higher shared memory is needed. We need to recreate the docker container with higher shared memory. First delete the existing container by typing `docker rm daGAN` 
+* Recreate the container with higher shared memory as follows: 
+```
+docker run -it -p 8097:8097 --name daGAN --shm-size 16G -t omkarnu/domain-adaptation:adl /bin/bash
+```
+The --shm-size flag controls the amount of shared memory allocated to the container. 
 * Make sure the docker container is running. If it is running in interactive mode, deattach by pressing Ctrl+P then Ctrl+Q and then Ctrl+C. 
+* If the docker container is not running, you can start it by typing: `docker start daGAN`
 * CD into the directory where the zip file was extracted on the local computer 
 * Now, copy the files from local computer to docker container using the following command: 
 ```
