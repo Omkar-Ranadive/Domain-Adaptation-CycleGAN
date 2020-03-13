@@ -7,7 +7,6 @@ from data import create_dataset
 from models import create_model
 from util.visualizer import save_images
 from util import html
-import matplotlib.pyplot as plt
 import numpy as np
 
 
@@ -49,7 +48,6 @@ def run_iterative_gan(dataset, model, opt, web_dir, iterations):
         # if i % 5 == 0:  # save images to an HTML file
         #     print('processing (%04d)-th image... %s' % (i, img_path))
 
-    # plt.show()
     webpage.save()  # save the HTML
 
 

@@ -11,8 +11,63 @@ Additionally, this repository also contains a Multi-iterative CycleGAN architect
 ## Input and Output 
 The input to the model is an image (image in the original domain) and the output is also an image (image in the adapted domain). 
 
+## Deliverables 
+* Training data: [Download here](https://drive.google.com/open?id=1fd-w_ywnwFg2mZllALTXtoN-EeXBaTr7)
+* Pretrained models: Provided with this repository. [View](https://github.com/Omkar-Ranadive/Domain-Adaptation-CycleGAN/tree/master/checkpoints)
+* Source codes for the entire project: Provided with this repository. 
+* Dockerfile: Provided with this repository. [View](https://github.com/Omkar-Ranadive/Domain-Adaptation-CycleGAN/blob/master/Dockerfile)
+* Docker Image: [Download here](https://hub.docker.com/r/omkarnu/domain-adaptation)
+
 ## Getting Started 
-### Installation 
+
+## 1. Installing through Docker Hub 
+* Pull the pre-built docker file by running  `docker pull omkarnu/domain-adaptation` 
+* Run the image by typing the following: 
+```
+docker run -it -p 8097:8097 --name daGAN -t omkarnu/domain-adaptation:adl /bin/bash
+```
+* Switch into the project directory: `cd Domain-Adaptation-CycleGAN`
+
+## 2. Installing through Docker File [Alternate]
+* Download the docker file provided from [here. ](https://github.com/Omkar-Ranadive/Domain-Adaptation-CycleGAN/blob/master/Dockerfile) 
+* Run `docker build -t omkarnu/domain-adaptation:adl .` in the directory where the Dockerfile is present. 
+* Run the image by typing the following: 
+```
+docker run -it -p 8097:8097 --name daGAN -t omkarnu/domain-adaptation:adl /bin/bash
+```
+* Switch into the project directory: `cd Domain-Adaptation-CycleGAN`
+
+### Testing the model inside Docker Container  
+**Testing domain adaptation results:**<br> 
+```
+python iterative_output.py --dataroot ./datasets/sim2real --name=s2r --model=test --no_dropout --carData True --iterations 1 --num_test 130 --gpu_ids -1 
+```
+The generated results can be viewed in `Domain-Adaptation-CycleGAN/results/s2r/test_latest/images` folder. <br>
+
+**Testing multi-iterative CycleGAN results:**<br>
+```
+python iterative_output.py --dataroot ./datasets/summer2winter_yosemite --name=s2w_iterative --model=test --no_dropout --iterations 3 --num_test 50 --gpu_ids -1 
+```
+The generated results can be viewed in the `Domain-Adaptation-CycleGAN/results/s2w_iterative/test_latest/images` folder.<br>
+
+### Training inside Docker Container [optional] 
+* Download the training data from [here.](https://drive.google.com/file/d/1fd-w_ywnwFg2mZllALTXtoN-EeXBaTr7/view?usp=sharing). Note: This data is a subset of [GTA5](http://efrosgans.eecs.berkeley.edu/cyclegta/gta.zip) dataset and the [Cityscapes](https://www.cityscapes-dataset.com/) dataset. 
+* Extract the zip file on your local computer 
+* Make sure the docker container is running. If it is running in interactive mode, deattach by pressing Ctrl+P then Ctrl+Q and then Ctrl+C. 
+* CD into the directory where the zip file was extracted on the local computer 
+* Now, copy the files from local computer to docker container using the following command: 
+```
+docker cp sim2real daGAN:/workspace/Domain-Adaptation-CycleGAN/datasets
+```
+* Attach back into the container by typing `docker attach daGAN` 
+* Go into project directory `cd Domain-Adaptation-CycleGAN`
+* Run the training using the following command: 
+```
+python -m visdom.server & python train_sim.py --dataroot ./datasets/sim2real --name s2r --model cycle_gan --carData True --gpu_ids -1 --continue_train  
+```
+* The training progress can be viewed on localhost:8097
+
+## 3. Installation [Manual] 
 * Clone the repository 
 ```
 git clone https://github.com/Omkar-Ranadive/Domain-Adaptation-CycleGAN
