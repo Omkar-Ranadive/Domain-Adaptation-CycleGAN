@@ -21,7 +21,7 @@ The input to the model is an image (image in the original domain) and the output
 ## Getting Started 
 
 ## 1. Installing through Docker Hub 
-* Pull the pre-built docker file by running  `docker pull omkarnu/domain-adaptation` 
+* Pull the pre-built docker file by running  `docker pull omkarnu/domain-adaptation:adl` 
 * Run the image by typing the following: 
 ```
 docker run -it -p 8097:8097 --name daGAN -t omkarnu/domain-adaptation:adl /bin/bash
